@@ -1,0 +1,2 @@
+module SalesfloorHelper
+end

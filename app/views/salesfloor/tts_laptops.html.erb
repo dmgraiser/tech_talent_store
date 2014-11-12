@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Laptops</h1>
+  <div class="row">
+    <% @products.each do |product| %>
+	    <% if product.category == "laptops"%>
+	      <div class = "col-md-4">
+	      
+	      	<div class="panel panel-default">
+	      		<div class="panel-body">
+		          <h1><%= product.name %></h1>
+		          <h2><%= number_to_currency(product.price) %></h2>
+		          <h4><%= product.description %></h4>
+		          <%= image_tag product.avatar.url(:medium) %>
+		          <div>
+            <br>
+            <%= form_tag('salesfloor/purchased') do %>
+            <strong>Quantity: </strong><%= number_field_tag :stock %>
+            <span class="cant-see-me"><%= text_field_tag :item, product.name %></span>
+            <span class="cant-see-me"><%= text_field_tag :id, product.id %></span>
+            <%= submit_tag 'Purchase', class: "btn btn-default" %>
+            <% end %>
+          </div>
+          <br>
+		        </div>
+		      </div>
+	          
+	          
+	      </div>
+	      <% end %>
+    <% end %>
+  </div>
+  <br>
+</div>
+
+<br>
