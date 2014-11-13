@@ -1,18 +1,18 @@
 class SalesfloorController < ApplicationController
   def welcome
-  	@products = Product.all
+  	@products = Product.all.order(:id)
   end
 
   def tts_laptops
-  	@products = Product.all
+  	@products = Product.all.order(:id)
   end
 
   def tts_clothing
-  	@products = Product.all
+  	@products = Product.all.order(:id)
   end
 
   def tts_books
-  	@products = Product.all
+  	@products = Product.all.order(:id)
   end
 
   def purchased
