@@ -16,7 +16,7 @@
         <td><%= product.description %></td>
         <td><%= product.category %></td>
         <td><%= product.stock %></td>
-        <td><%= image_tag product.avatar.url(:thumbnail) %></td>
+        <td><%= image_tag product.avatar.url(:thumb) %></td>
         <td>
           <%= link_to 'Show', product %>
           <%= link_to 'Edit', edit_product_path(product) %>
