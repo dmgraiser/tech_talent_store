@@ -4,6 +4,7 @@
 
 		<p>Thank you for purchasing:</p>
 		<p><%= pluralize(@stock, @item) %></p>
+		<%= link_to "Confirm Order", checkout_order_confirm_path, class: "btn btn-success" %>
 	<%else %>
 		<%= @out_of_stock %>
 	<% end %>

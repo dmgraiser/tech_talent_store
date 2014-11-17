@@ -30,6 +30,17 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
+	        <li>
+	        	<% if user_signed_in? %>
+							<h4> Welcome, <%= link_to current_user.name, edit_user_registration_path %>!</h4>
+						</li>
+						<li>
+							<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button btn-warning" %>
+						<% else %>
+ 							<li>
+ 								<%= link_to "Sign in", new_user_session_path %>
+						<% end %>
+	        </li>
 	        <li><%= link_to "Laptops", laptops_path %></li>
 	        <li><%= link_to "Books", books_path %></li>
 	        <li><%= link_to "Clothing", clothing_path %></li>

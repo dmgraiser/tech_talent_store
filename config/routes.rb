@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'checkout/order_confirm'
+
+  devise_for :users
   get 'laptops' => 'salesfloor#tts_laptops'
 
   get 'clothing' => 'salesfloor#tts_clothing'
