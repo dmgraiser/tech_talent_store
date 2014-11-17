@@ -44,7 +44,7 @@ gem "devise"
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
-group :production do |variable|
+group :production do
 	gem 'pg', '0.17.1'
 	gem 'rails_12factor', '0.0.2'
 end
